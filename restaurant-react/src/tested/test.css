@@ -1,0 +1,26 @@
+
+.parent{
+    margin-top: 30px;
+    background-color: green;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+    border-radius: 10px;
+}
+
+
+.child{
+    background-color: blue;
+    height: 60%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+button{
+    height: 2rem;
+}

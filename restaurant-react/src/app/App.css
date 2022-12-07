@@ -1,0 +1,842 @@
+:root {
+  --valid: rgba(48, 237, 17, 0.63);
+  --not-valid: rgba(175, 6, 6, 0.66);
+  --buyNow: #0E6943;
+}
+
+
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.w{
+  width: 30%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  outline: none;
+}
+
+.dark-bg {
+  background: #121111;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  color: white;
+}
+
+.contactus {
+  background-color: #ff8da1;
+  border: none;
+  border-radius: 99px;
+  color: black;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+}
+.contactus:active {
+  background-color: pink;
+}
+.contactus:hover {
+  scale: 1.01;
+}
+
+.btn {
+  display: flex;
+  gap: 2rem;
+}
+.btn button {
+  background-color: transparent;
+  border: 2px solid #000000;
+  border-radius: 99px;
+  padding: 0.3rem 4rem;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: transform 250ms linear;
+}
+.btn button:hover {
+  background-color: white;
+  color: black;
+  transition: 250ms ease-in;
+  transform: translateY(-5px);
+}
+
+.buttons {
+  grid-area: 4/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+.buttons button {
+  color: white;
+  cursor: pointer;
+  margin-top: 4rem;
+  border: 1px solid #FFFFFF;
+  border-radius: 22px;
+  padding: 0.7rem 5rem;
+  background-color: transparent;
+  font-weight: 600;
+  transition: 300ms ease-in;
+}
+.buttons button:hover {
+  background-color: white;
+  color: black;
+}
+
+.header {
+  grid-area: 1/1/2/-1;
+  display: grid;
+  grid-template: 5rem/3rem 1fr 0.5fr 1fr 3rem;
+  background-color: rgb(0, 0, 0);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1/3/-1/-4;
+  cursor: pointer;
+}
+.logo img {
+  width: 5rem;
+  height: 5rem;
+}
+.logo img:hover {
+  transition: transform 1s linear;
+  transform: rotate(360deg);
+  transition: 0.5s ease-in;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1/4/-1/5;
+}
+.navigation ul {
+  gap: 2rem;
+  display: flex;
+  list-style: none;
+}
+.navigation ul li:nth-child(1)::after, .navigation ul :nth-child(2)::after {
+  content: "";
+  display: block;
+  margin-top: 0.2rem;
+}
+.navigation ul li:hover::after {
+  animation: nav-bar 300ms ease-out forwards;
+}
+
+@keyframes nav-bar {
+  0% {
+    width: 0%;
+    height: 0.2rem;
+    background-color: pink;
+  }
+  100% {
+    width: 100%;
+    height: 0.2rem;
+    background-color: pink;
+  }
+}
+footer {
+  grid-area: 8/2/9/8;
+  display: grid;
+  grid-template: 1fr 1rem/repeat(3, 1fr);
+}
+
+.footer {
+  display: flex;
+  gap: 10rem;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  grid-area: 1/1;
+}
+.footer-logo img {
+  width: 20%;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1/2;
+  display: flex;
+  gap: 4em;
+}
+.footer-links li {
+  line-height: 1.3em;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1/3;
+  margin-top: 1rem;
+}
+.socials ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.email-footer img {
+  width: 2rem;
+}
+
+.linkedin-footer img {
+  width: 3rem;
+}
+
+.github-footer img {
+  width: 3rem;
+}
+
+.layout {
+  display: grid;
+  grid-template: 5rem 2rem 0.5fr 0.5rem 0.4fr 1.5fr 3rem/5rem repeat(3, 1rem 1fr) 5rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template: repeat(3, 1rem 1rem 1fr)/1fr;
+}
+
+.about {
+  display: grid;
+  grid-template: 5rem 2rem 2fr 5rem 0.9fr 2rem/5rem 1fr 5rem;
+}
+
+.staff {
+  grid-area: 3/2;
+  display: grid;
+  grid-template: repeat(5, 1fr)/4rem repeat(3, 1fr 1rem) 3rem;
+  height: 120vh;
+}
+
+.owner {
+  grid-area: 5/2;
+  display: grid;
+  grid-template: 1fr 1fr 0.8fr/4rem 1fr 2rem 0.4fr 4rem;
+}
+
+.menu {
+  display: grid;
+  grid-template: 5rem 0.4fr 1fr 4rem 2rem 2rem/5rem 1fr 5rem;
+}
+
+.menu-container {
+  display: flex;
+  padding: 2rem;
+  gap: 3rem;
+  color: black;
+}
+
+.menu-card-wrapper {
+  display: grid;
+  border: 2px solid #000000;
+  grid-template: 0.5fr 0.2fr 1fr/1fr;
+  border-radius: 23px;
+  transition: scale 250ms linear;
+  cursor: default;
+}
+.menu-card-wrapper:hover {
+  scale: 1.02;
+}
+
+.menu-card--info {
+  grid-area: 2/1/-1/3;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 22px;
+  display: grid;
+  grid-template: 2rem 4rem 2rem 3rem 0.3fr 1rem 0.3fr 1rem/1fr 2rem;
+}
+
+.training__container-text {
+  grid-area: 3/2/3/8;
+  display: grid;
+  grid-template: 1fr 1rem 1fr/3fr 1rem 1fr;
+  height: 50vh;
+  color: white;
+  letter-spacing: 0.08rem;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.training__container--card {
+  grid-area: 6/3/7/8;
+  display: grid;
+  grid-template: repeat(3, 2rem) 1fr 6rem/repeat(3, 1rem 1fr);
+}
+
+.package-card {
+  display: flex;
+  flex-flow: column;
+  background: rgba(255, 255, 255, 0.74);
+  border: 3px solid black;
+  border-radius: 33px 33px 0px 0px;
+  box-shadow: 0px 0px 11px 11px rgba(0, 0, 0, 0.9);
+  color: black;
+  font-size: 1.2rem;
+  cursor: default;
+  transition: scale 250ms ease-in-out;
+}
+.package-card:hover {
+  scale: 0.95;
+}
+
+.form-container {
+  display: grid;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100vw;
+  z-index: 2;
+}
+
+.form-element {
+  grid-area: 2/2;
+  box-shadow: 0px 0px 70px 21px rgba(25, 23, 23, 0.37);
+  border: 2px solid white;
+  border-radius: 38px;
+  display: grid;
+  grid-template: 2rem repeat(2, 3rem) 2rem 1rem 1fr 2rem/1rem 1fr 0.5fr 1rem;
+  width: 40vw;
+  height: 70vh;
+  background: #1f1d1d;
+}
+
+.background {
+  position: fixed;
+  background-image: url("../assets/wallpaperflare.com_wallpaper.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-area: 4/1;
+}
+.hero h1 {
+  font-style: normal;
+  font-family: serif;
+  color: black;
+  font-size: 4rem;
+}
+
+.upper-text {
+  display: flex;
+  justify-content: center;
+  grid-area: 1/1;
+  font-style: italic;
+  text-align: center;
+  font-weight: 300;
+}
+
+.lower-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 3/1;
+  align-items: flex-end;
+  text-align: center;
+  font-weight: 300;
+}
+
+.trainer-img {
+  grid-area: 1/3/-1;
+  background-image: url("../assets/profiles/veuve-clicquot-asias-best-female-chef-2015_vicky-lau_2.png");
+  background-size: cover;
+  margin-top: 1rem;
+  height: 90%;
+  box-shadow: 0px 0px 11px 11px rgba(0, 0, 0, 0.9);
+}
+
+.sy-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 5/5;
+  text-align: center;
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+.buy-now {
+  display: flex;
+  justify-content: center;
+  background: var(--buyNow);
+  height: 100%;
+  color: white;
+  padding: 2rem;
+  cursor: pointer;
+  transition: scale 100ms linear;
+}
+.buy-now:hover {
+  background: #149660;
+  border-radius: 6px;
+  scale: 1.02;
+}
+
+.perks li {
+  border: solid black;
+  border-width: 1px 0px 1px 0px;
+  text-align: center;
+  padding: 0.8rem;
+}
+
+.tempura {
+  grid-area: 4/2/6;
+  scale: 0.9;
+}
+
+.card-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px 30px 0px 0px;
+  padding: 3rem;
+}
+.card-logo img {
+  width: 20%;
+}
+
+.ramen {
+  grid-area: 1/4/5;
+  scale: 0.9;
+}
+
+.sushi {
+  grid-area: 4/6/6;
+  scale: 0.9;
+}
+
+.valid {
+  background: var(--valid);
+}
+
+.not-valid {
+  background-color: var(--not-valid);
+}
+
+.location-img {
+  grid-area: 1/6/4;
+  background-image: url("/img/profiles/japan-restaurant-front-traditional-facade-preview.jpg");
+  box-shadow: 0px 0px 11px 11px rgba(0, 0, 0, 0.9);
+}
+.location-img img {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.location-text {
+  grid-area: 1/2/3/5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.location-address {
+  grid-area: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.staff-img {
+  grid-area: 3/2/6;
+  background-image: url("/src/assets/profiles/kitchen-team.jpg");
+  background-size: cover;
+  box-shadow: 0px 0px 11px 11px rgba(0, 0, 0, 0.9);
+}
+
+.staff-text1 {
+  grid-area: 4/4/5/7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.staff-text2 {
+  grid-area: 5/4/6/7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.owner-img {
+  grid-area: 1/4/3;
+  background-image: url("/src/assets/profiles/veuve-clicquot-asias-best-female-chef-2015_vicky-lau_2.png");
+  background-size: cover;
+  box-shadow: 0px 0px 11px 11px rgba(0, 0, 0, 0.9);
+}
+
+.owner-text1 {
+  grid-area: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.owner-text2 {
+  grid-area: 2/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.owner-info {
+  margin-top: 1.2rem;
+  grid-area: 3/4;
+  line-height: 1.2rem;
+  font-weight: 300;
+}
+
+.menu-text {
+  grid-area: 2/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.img-container {
+  grid-area: 1/1/3/3;
+}
+
+.img-container img{
+  border-radius: 22px 22px 0px 0px;
+  width: 100%;
+  height: 78%;
+}
+
+
+.menu-card--logo {
+  grid-area: 2/1/2/3;
+  display: flex;
+  justify-content: center;
+}
+.menu-card--logo img {
+  width: 4rem;
+}
+
+.question-mark {
+  grid-area: 1/2;
+}
+.question-mark img {
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  width: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.recipe-title {
+  grid-area: 3/1/3/8;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.icons {
+  grid-area: 4/1/4/8;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.prepTimer::after {
+  content: "";
+  display: flex;
+  flex-direction: row;
+}
+.prepTimer img {
+  width: 2rem;
+}
+
+.rating::after {
+  content: "";
+  display: block;
+  flex-direction: row;
+}
+.rating img {
+  width: 2rem;
+}
+
+.non-veg::after {
+  content: "";
+  text-decoration: line-through;
+  display: block;
+  flex-direction: row;
+}
+.non-veg img {
+  width: 2rem;
+}
+
+.ingredients {
+  grid-area: 5/1;
+}
+
+.main-ingredient {
+  margin-top: 1.6rem;
+  margin-left: 1rem;
+ 
+}
+.main-ingredient p {
+  margin-bottom: 0;
+}
+.main-ingredient ul {
+  margin-left: 1.4rem;
+  list-style-type: circle;
+}
+
+.sup-ingredient {
+  margin-left: 1rem;
+}
+.sup-ingredient p {
+  margin-bottom: 0;
+}
+.sup-ingredient ul {
+  margin-left: 2rem;
+  list-style-type: circle;
+}
+
+.order-btn {
+  grid-area: 7/1/8/8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-btn button {
+  background: #7F525B;
+  mix-blend-mode: hard-light;
+  border-radius: 14px;
+  padding: 1.3rem 30%;
+  cursor: pointer;
+}
+.order-btn button:hover {
+  background: #8e5c66;
+}
+
+.lemonade-img {
+  background-image: url("/img/menu/drinks/Cold-Lemonade-Mojito-Cocktail.jpg");
+}
+
+.lemonade-prepTime::after {
+  content: "10min";
+}
+
+.lemonade-rating::after {
+  content: "4/5";
+}
+
+.cucumber-img {
+  background-image: url("/img/menu/drinks/cucumber-cocktail.jpg");
+}
+
+.cucumber-prepTime::after {
+  content: "10min";
+}
+
+.cucumber-rating::after {
+  content: "4/5";
+}
+
+.bloody-img {
+  background-image: url("/img/menu/drinks/bloodyMary-cocktail.jpg");
+}
+
+.bloody-prepTime::after {
+  content: "5min";
+}
+
+.bloody-rating::after {
+  content: "4/5";
+}
+
+.corneto-img {
+  background-image: url("/img/menu/ice-cream/corneto.png");
+}
+
+.corneto-prepTime::after {
+  content: "5min";
+}
+
+.corneto-rating::after {
+  content: "4/5";
+}
+
+.popsicle-img {
+  background-image: url("/img/menu/ice-cream/popcicles.jpg");
+}
+
+.popsicle-prepTime::after {
+  content: "5min";
+}
+
+.popsicle-rating::after {
+  content: "4/5";
+}
+
+.sundae-img {
+  background-image: url("/img/menu/ice-cream/sundae.png");
+}
+
+.sundae-prepTime::after {
+  content: "5min";
+}
+
+.sundae-rating::after {
+  content: "4/5";
+}
+
+.sap {
+  height: 1rem;
+  margin-bottom: 3rem;
+}
+
+.contact-slot {
+  grid-area: 2/1;
+}
+
+.email-address {
+  grid-area: 2/2;
+}
+
+.tel {
+  grid-area: 3/2;
+}
+
+.summit {
+  grid-area: 3/3;
+  background-color: pink;
+  border: 2px solid #000000;
+  border-radius: 7px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.email-info {
+  display: flex;
+  grid-area: 4/2;
+  gap: 1rem;
+}
+
+.email-info input {
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 7px;
+  opacity: 0.9;
+}
+
+.text-area {
+  color: black;
+  position: static;
+  grid-area: 6/2/6/4;
+  outline: none;
+}
+
+/*# sourceMappingURL=style.css.map */
